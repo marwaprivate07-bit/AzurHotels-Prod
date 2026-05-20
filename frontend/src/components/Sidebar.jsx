@@ -5,7 +5,11 @@ import belAzurLogo   from "../assets/bel_azur_logo.png";
 import solAzurLogo   from "../assets/sol_azur_logo.png";
 // import bioAzurLogo   from "../assets/bel_azur_logo.png";
 
-const HOTEL_LOGOS = { 1: royalAzurLogo, 2: belAzurLogo, 3: solAzurLogo };
+const HOTEL_LOGOS = { 
+  1: import.meta.env.VITE_LOGO_HOTEL_1 || royalAzurLogo, 
+  2: import.meta.env.VITE_LOGO_HOTEL_2 || belAzurLogo, 
+  3: import.meta.env.VITE_LOGO_HOTEL_3 || solAzurLogo 
+};
 
 // ── Icônes (inchangées) ──
 const IconCA = () => (
