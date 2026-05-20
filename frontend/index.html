@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azur Hotels BI</title>
+    <style>
+      @media print {
+        @page { size: A4 landscape; margin: 10mm; }
+
+        /* Hide chrome */
+        aside,
+        [data-topbar],
+        button { display: none !important; }
+
+        /* Reset layout - break out of flex */
+        body, html { background: #fff !important; }
+        #root > * { display: block !important; }
+        .flex.h-screen { display: block !important; height: auto !important; }
+        .flex.flex-col.flex-1 { display: block !important; }
+
+        /* Main content */
+        main {
+          overflow: visible !important;
+          height: auto !important;
+          width: 100% !important;
+          padding: 0 !important;
+          display: block !important;
+        }
+
+        /* Preserve colors */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Fix Recharts SVG — must have explicit dimensions */
+        .recharts-responsive-container {
+          width: 100% !important;
+          page-break-inside: avoid;
+        }
+        .recharts-responsive-container > .recharts-wrapper {
+          width: 100% !important;
+        }
+        .recharts-wrapper svg {
+          width: 100% !important;
+          overflow: visible !important;
+        }
+
+        /* Prevent cards splitting across pages */
+        .recharts-responsive-container,
+        table,
+        [style*="border-radius"] { break-inside: avoid; page-break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

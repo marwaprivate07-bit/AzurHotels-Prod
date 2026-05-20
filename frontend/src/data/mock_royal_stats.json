@@ -1,0 +1,57 @@
+{
+    "hotel_id": 1,
+    "hotel_name": "Royal Azur",
+    "years": {
+        "2023": {
+            "kpi": { "booking_score": 8.6 },
+            "mensuel": [
+                { "mois": 1, "mois_nom": "Janvier", "booking_score": 8.4 },
+                { "mois": 2, "mois_nom": "Fevrier", "booking_score": 8.5 },
+                { "mois": 3, "mois_nom": "Mars", "booking_score": 8.3 },
+                { "mois": 4, "mois_nom": "Avril", "booking_score": 8.7 },
+                { "mois": 5, "mois_nom": "Mai", "booking_score": 8.8 },
+                { "mois": 6, "mois_nom": "Juin", "booking_score": 8.9 },
+                { "mois": 7, "mois_nom": "Juillet", "booking_score": 9.0 },
+                { "mois": 8, "mois_nom": "Aout", "booking_score": 8.9 },
+                { "mois": 9, "mois_nom": "Septembre", "booking_score": 8.7 },
+                { "mois": 10, "mois_nom": "Octobre", "booking_score": 8.6 },
+                { "mois": 11, "mois_nom": "Novembre", "booking_score": 8.5 },
+                { "mois": 12, "mois_nom": "Decembre", "booking_score": 8.4 }
+            ]
+        },
+        "2024": {
+            "kpi": { "booking_score": 8.8 },
+            "mensuel": [
+                { "mois": 1, "mois_nom": "Janvier", "booking_score": 8.7 },
+                { "mois": 2, "mois_nom": "Fevrier", "booking_score": 8.6 },
+                { "mois": 3, "mois_nom": "Mars", "booking_score": 8.8 },
+                { "mois": 4, "mois_nom": "Avril", "booking_score": 8.9 },
+                { "mois": 5, "mois_nom": "Mai", "booking_score": 9.0 },
+                { "mois": 6, "mois_nom": "Juin", "booking_score": 9.1 },
+                { "mois": 7, "mois_nom": "Juillet", "booking_score": 9.2 },
+                { "mois": 8, "mois_nom": "Aout", "booking_score": 9.1 },
+                { "mois": 9, "mois_nom": "Septembre", "booking_score": 8.9 },
+                { "mois": 10, "mois_nom": "Octobre", "booking_score": 8.8 },
+                { "mois": 11, "mois_nom": "Novembre", "booking_score": 8.7 },
+                { "mois": 12, "mois_nom": "Decembre", "booking_score": 8.8 }
+            ]
+        },
+        "2025": {
+            "kpi": { "booking_score": 9.0 },
+            "mensuel": [
+                { "mois": 1, "mois_nom": "Janvier", "booking_score": 8.9 },
+                { "mois": 2, "mois_nom": "Fevrier", "booking_score": 9.0 },
+                { "mois": 3, "mois_nom": "Mars", "booking_score": 9.1 },
+                { "mois": 4, "mois_nom": "Avril", "booking_score": 9.2 },
+                { "mois": 5, "mois_nom": "Mai", "booking_score": 9.3 },
+                { "mois": 6, "mois_nom": "Juin", "booking_score": 9.4 },
+                { "mois": 7, "mois_nom": "Juillet", "booking_score": 9.5 },
+                { "mois": 8, "mois_nom": "Aout", "booking_score": 9.4 },
+                { "mois": 9, "mois_nom": "Septembre", "booking_score": 9.3 },
+                { "mois": 10, "mois_nom": "Octobre", "booking_score": 9.1 },
+                { "mois": 11, "mois_nom": "Novembre", "booking_score": 9.0 },
+                { "mois": 12, "mois_nom": "Decembre", "booking_score": 9.1 }
+            ]
+        }
+    }
+}

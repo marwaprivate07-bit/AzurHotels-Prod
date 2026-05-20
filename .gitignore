@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Data (Clean data is kept, raw/zips are ignored if large, but here we keep data/)
+# data/raw/
+# *.xlsx
+# *.xls
+
+# Node.js
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Logs
+*.log
+
+# Scripts (Cleanup)
+clone_sol_azur.py
+generate_booking_data.py
+migrate_sql.py
+fix_schema.py
