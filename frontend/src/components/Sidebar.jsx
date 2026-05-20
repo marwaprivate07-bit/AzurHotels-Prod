@@ -63,9 +63,10 @@ const ADMIN_LINKS = [
 ];
 
 export default function Sidebar({ onLogout }) {
-  const { hotelId, user, isAdmin, dashboardsVisibles } = useDashboard();
+  const { hotel, hotelId, user, isAdmin, dashboardsVisibles } = useDashboard();
 
-  const logo = HOTEL_LOGOS[hotelId];
+  const hotelLogoFromDb = hotel?.logo_url;
+  const logo = hotelLogoFromDb || HOTEL_LOGOS[hotelId];
 
   // ── Liens visibles = dashboards autorisés pour cet utilisateur ──
   const visibleBaseLinks = dashboardsVisibles.map(d => ({

@@ -79,10 +79,10 @@ conn.commit()
 # ══════════════════════════════════════════════════════════════════════════════
 
 # Population dim_hotel si vide
-cursor.execute("CREATE TABLE IF NOT EXISTS dim_hotel (hotel_id INT AUTO_INCREMENT PRIMARY KEY, code_hotel VARCHAR(10) UNIQUE, nom_hotel VARCHAR(100), categorie VARCHAR(10), nb_chambres INT, nb_lits INT)")
+cursor.execute("CREATE TABLE IF NOT EXISTS dim_hotel (hotel_id INT AUTO_INCREMENT PRIMARY KEY, code_hotel VARCHAR(10) UNIQUE, nom_hotel VARCHAR(100), categorie VARCHAR(10), nb_chambres INT, nb_lits INT, logo_url VARCHAR(500))")
 for code_key, h in HOTELS.items():
-    cursor.execute("INSERT IGNORE INTO dim_hotel (hotel_id, code_hotel, nom_hotel, categorie, nb_chambres, nb_lits) VALUES (%s, %s, %s, %s, %s, %s)", 
-                  (h['id'], code_key, h['nom'], h.get('categorie'), h.get('chambres'), h.get('lits')))
+    cursor.execute("INSERT INTO dim_hotel (hotel_id, code_hotel, nom_hotel, categorie, nb_chambres, nb_lits, logo_url) VALUES (%s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE nom_hotel=VALUES(nom_hotel), categorie=VALUES(categorie), nb_chambres=VALUES(nb_chambres), nb_lits=VALUES(nb_lits), logo_url=VALUES(logo_url)", 
+                  (h['id'], code_key, h['nom'], h.get('categorie'), h.get('chambres'), h.get('lits'), h.get('logo_url')))
 conn.commit()
 
 cursor.execute("DROP TABLE IF EXISTS fact_charges")
