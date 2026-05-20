@@ -14,7 +14,7 @@ import EditableText from "../components/EditableText";
 import { IconUsers, IconZap, IconShoppingCart, IconBuilding2, IconCreditCard, IconClipboard, IconCrane, IconLightBulb, IconFlame, IconDroplet, IconFuel, IconBarChart, IconCheckCircle, IconAlertCircle, IconCrown, IconGem, IconSparkles, IconRocket, IconLeaf, IconTarget, IconCoins, IconTrendUp, IconTrendDown, IconScale } from "../components/KpiIcons";
 
 // ─── API ──────────────────────────────────────────────────────────────────────
-const API = axios.create({ baseURL: "/api" });
+const API = axios.create({ baseURL: import.meta.env.VITE_API_URL || "/api" });
 API.interceptors.request.use(cfg => {
   const t = localStorage.getItem("bi_token");
   if (t) cfg.headers.Authorization = `Bearer ${t}`;
