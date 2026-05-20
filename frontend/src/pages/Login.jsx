@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import axios from "axios";
+import API from "../services/api";
 import azurGroupLogo from "../assets/azurhotelsgroup.png";
 
 const C = {
@@ -62,7 +62,7 @@ function ForgotPasswordPanel({ onBack }) {
     if (!username.trim()) { setError("Veuillez entrer votre identifiant."); return; }
     setError(""); setLoading(true);
     try {
-      const res = await axios.post("/api/auth/forgot-password", { username: username.trim() });
+      const res = await API.post("/auth/forgot-password", { username: username.trim() });
       if (res.data.success) setSent(true);
       else setError(res.data.error || "Erreur inconnue.");
     } catch (err) {
@@ -168,7 +168,7 @@ export default function Login({ onLogin }) {
     if (!validate()) return;
     setLoading(true);
     try {
-      const res = await axios.post("/api/auth/login", {
+      const res = await API.post("/auth/login", {
         username: form.username.trim(), password: form.password, rememberMe: form.rememberMe,
       });
       if (res.data.success) {
